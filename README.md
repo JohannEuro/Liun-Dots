@@ -1,4 +1,4 @@
-# GENTLE-DOTS
+# Liun-Dots
 
 Mi configuración personal de entorno de desarrollo: rápido, estético y portable.
 
@@ -12,7 +12,7 @@ Mi configuración personal de entorno de desarrollo: rápido, estético y portab
 (Próximamente: script de instalación automática)
 ```bash
 # Clone
-git clone https://github.com/tu-usuario/gentle-dots.git ~/.gentle-dots
+git clone https://github.com/tu-usuario/Liun-Dots.git ~/.Liun-Dots
 # Link (ejemplo)
-ln -s ~/.gentle-dots/config/nvim ~/.config/nvim
+ln -s ~/.Liun-Dots/config/nvim ~/.config/nvim
 ```
