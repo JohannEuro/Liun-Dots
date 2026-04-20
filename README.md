@@ -1,47 +1,44 @@
 # Liun-Dots
 
-¡Bienvenido a mi configuración personal! Aquí encontrarás todo lo necesario para tener un entorno de desarrollo profesional, rápido y estético, igual al mío.
+¡Bienvenido a mi configuración personal! Entorno de desarrollo profesional, rápido y estético.
 
-## 🚀 Guía de Instalación (Linux/WSL)
+## 🚀 Guía de Instalación (One-Shot)
 
-Esta guía asume que estás usando una distribución basada en Debian/Ubuntu (como WSL o Ubuntu nativo) y que usas **Linuxbrew**.
-
-### 1. Requisitos previos
-Primero, asegurate de tener instalado **Git** y **Linuxbrew**. Si no tenés Brew, instalalo desde [brew.sh](https://brew.sh/).
-
-### 2. Clonar el repositorio
-Abrí tu terminal y ejecutá:
+### 1. Clonar el repositorio
 ```bash
 git clone https://github.com/JohannEuro/Liun-Dots.git ~/.Liun-Dots
 ```
 
-### 3. Instalar dependencias
-Instalamos todo lo necesario vía `brew`:
+### 2. Instalar dependencias según tu sistema
+
+#### Opción A: Fedora Linux (Recomendado)
 ```bash
-brew install fish neovim zellij starship wezterm eza bat fzf gh zoxide
+# Instalar herramientas básicas y lenguajes
+sudo dnf install -y fish neovim zellij starship eza bat fzf zoxide gh nodejs
+# Instalar Rust (vía rustup)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Instalar WezTerm (sigue las instrucciones oficiales de fedora: https://wezfurlong.org/wezterm/install/linux.html)
 ```
 
-### 4. Vincular las configuraciones (Symlinks)
-Para que Linux lea los archivos de este repo como si fueran suyos, creamos enlaces simbólicos:
-
+#### Opción B: Ubuntu / WSL
 ```bash
-# Crear carpetas de config si no existen
-mkdir -p ~/.config
-
-# Vincular cada configuración
-ln -s ~/.Liun-Dots/config/nvim ~/.config/nvim
-ln -s ~/.Liun-Dots/config/fish ~/.config/fish
-ln -s ~/.Liun-Dots/config/wezterm ~/.config/wezterm
-ln -s ~/.Liun-Dots/config/zellij ~/.config/zellij
-ln -s ~/.Liun-Dots/config/starship.toml ~/.config/starship.toml
+# Usando Linuxbrew (como en mi setup)
+brew install fish neovim zellij starship eza bat fzf gh zoxide node rust
 ```
 
-### 5. Finalización
-1. **Establecer Fish como shell:**
+### 3. Instalación automática (PUM y listo)
+Ejecutá el script incluido para configurar todo:
+```bash
+chmod +x ~/.Liun-Dots/install.sh
+~/.Liun-Dots/install.sh
+```
+
+### 4. Finalización
+1. **Cambiar shell a Fish:**
    ```bash
    chsh -s $(which fish)
    ```
-2. **Reiniciar terminal:** Cerrá todo y volvé a abrir para que cargue la configuración nueva.
+2. **Reiniciar terminal:** Cerrá y abrila de nuevo.
 
 ---
-⚠️ **Nota para el arquitecto:** Algunos archivos de configuración contienen rutas absolutas apuntando a `/home/liun`. Si tu nombre de usuario es distinto, asegúrate de buscar y reemplazar `/home/liun/` por `/home/tu-usuario/` en los archivos `.lua` o `.toml` antes de iniciar.
+⚠️ **Nota para el arquitecto:** Si tu usuario no es `liun`, recordá buscar y reemplazar `/home/liun/` por tu ruta de usuario en los archivos de configuración (`.lua`, `.toml`, etc.) después de instalar.
