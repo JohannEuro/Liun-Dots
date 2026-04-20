@@ -1,0 +1,94 @@
+format = """\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$nodejs$python$golang$rust$bun$java$php\
+$cmd_duration\
+$time\
+\n$character\
+"""
+
+add_newline = true
+command_timeout = 2000
+palette = "nude"
+
+[fill]
+symbol = " "
+
+[palettes.nude]
+text = "#d6c4b6"
+subtext = "#a89a8e"
+soft = "#82756a"
+rose = "#c97e7b"
+sand = "#c2a383"
+sky = "#8099a6"
+plum = "#a6889d"
+mint = "#7d9e92"
+paper = "#1a1614"
+panel = "#26211e"
+accent = "#e0b084"
+
+[username]
+style_user = "bold sky"
+style_root = "bold rose"
+format = "[$user]($style_user) "
+disabled = false
+show_always = true
+
+[directory]
+style = "bold text"
+read_only_style = "rose"
+truncation_length = 3
+truncation_symbol = "…/"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = "git:"
+format = "[ $symbol$branch ](bold plum)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]](soft)) '
+
+[nodejs]
+symbol = "⬢ "
+format = "[$symbol$version ](mint)"
+
+[python]
+symbol = "🐍 "
+format = "[$symbol$version ](sand)"
+
+[golang]
+symbol = "🐹 "
+format = "[$symbol$version ](sky)"
+
+[rust]
+symbol = "🦀 "
+format = "[$symbol$version ](rose)"
+
+[bun]
+symbol = "🥟 "
+format = "[$symbol$version ](plum)"
+
+[java]
+symbol = "☕ "
+format = "[$symbol$version ](rose)"
+
+[php]
+symbol = "🐘 "
+format = "[$symbol$version ](sand)"
+
+[cmd_duration]
+min_time = 500
+format = "[ took ⏳ $duration ](soft)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ 🕒 $time ](subtext)"
+
+[character]
+success_symbol = "[❯](mint)"
+error_symbol = "[❯](rose)"
+vimcmd_symbol = "[❮](plum)"
