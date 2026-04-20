@@ -16,7 +16,16 @@ Este setup configura un entorno completo basado en estas herramientas:
 
 ## 🚀 Guía de Instalación (One-Shot)
 
-### 1. Clonar el repositorio
+### 1. Requisitos previos
+Primero, asegurate de tener instalado **Git**.
+
+**Si usás Ubuntu/WSL, instalá Linuxbrew:**
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Asegurate de agregar brew a tu PATH según las instrucciones al finalizar la instalación
+```
+
+### 2. Clonar el repositorio
 ```bash
 git clone https://github.com/JohannEuro/Liun-Dots.git ~/.Liun-Dots
 ```
