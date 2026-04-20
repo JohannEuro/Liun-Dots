@@ -2,6 +2,18 @@
 
 ¡Bienvenido a mi configuración personal! Entorno de desarrollo profesional, rápido y estético.
 
+## 🛠️ Tecnologías Incluidas
+Este setup configura un entorno completo basado en estas herramientas:
+
+- **Shell:** `fish` (con `starship` para el prompt y `zoxide`/`fzf` para navegación).
+- **Editor:** `neovim` (configurado con LazyVim).
+- **Multiplexor:** `zellij` (gestión de ventanas y pestañas).
+- **Terminal:** `wezterm`.
+- **Utilidades:** `eza` (lista archivos), `bat` (lee archivos), `lazygit` (gestión git).
+- **Lenguajes:** `Node.js`, `Rust` (vía rustup), `Go`, `Python`.
+
+---
+
 ## 🚀 Guía de Instalación (One-Shot)
 
 ### 1. Clonar el repositorio
@@ -13,17 +25,21 @@ git clone https://github.com/JohannEuro/Liun-Dots.git ~/.Liun-Dots
 
 #### Opción A: Fedora Linux (Recomendado)
 ```bash
-# Instalar herramientas básicas y lenguajes
-sudo dnf install -y fish neovim zellij starship eza bat fzf zoxide gh nodejs
+# Instalar herramientas básicas, lenguajes y compiladores
+sudo dnf install -y \
+  fish neovim zellij starship eza bat fzf zoxide gh nodejs \
+  git gcc gcc-c++ make curl wget python3
+
 # Instalar Rust (vía rustup)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# Instalar WezTerm (sigue las instrucciones oficiales de fedora: https://wezfurlong.org/wezterm/install/linux.html)
+
+# Instalar WezTerm (sigue las instrucciones oficiales: https://wezfurlong.org/wezterm/install/linux.html)
 ```
 
 #### Opción B: Ubuntu / WSL
 ```bash
-# Usando Linuxbrew (como en mi setup)
-brew install fish neovim zellij starship eza bat fzf gh zoxide node rust
+# Instalación vía Linuxbrew
+brew install fish neovim zellij starship eza bat fzf gh zoxide node rust go
 ```
 
 ### 3. Instalación automática (PUM y listo)
