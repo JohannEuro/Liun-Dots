@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "description": "Liun-Dots TUI installer for PowerShell, Windows Terminal and Neovim",
+  "homepage": "https://github.com/JohannEuro/Liun-Dots",
+  "license": "MIT",
+  "url": "https://github.com/JohannEuro/Liun-Dots/releases/download/v0.1.0/liun-dots_0.1.0_windows_amd64.zip",
+  "hash": "skip",
+  "bin": "liun-dots.exe",
+  "notes": [
+    "Run 'liun-dots' to open the interactive installer.",
+    "Release builds should replace hash=skip with the real SHA256."
+  ]
+}
