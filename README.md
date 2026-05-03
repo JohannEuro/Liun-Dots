@@ -1,6 +1,41 @@
 # Liun Dots
 
+![Windows](https://img.shields.io/badge/Windows-First-0078D6?style=flat-square&logo=windows&logoColor=white)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-3fb950?style=flat-square)
+![PowerShell](https://img.shields.io/badge/PowerShell-7+-5391FE?style=flat-square&logo=powershell&logoColor=white)
+![Neovim](https://img.shields.io/badge/Neovim-Ready-57A143?style=flat-square&logo=neovim&logoColor=white)
+
 `Liun-Dots` prepara un entorno Windows limpio, rápido y cómodo para trabajar con **PowerShell 7**, **Windows Terminal** y **Neovim**. La idea no es complicarte la vida: es darte una base seria, entendible y fácil de recuperar si algo no te convence.
+
+---
+
+## Tabla de contenidos
+
+- [Resumen rápido](#resumen-rápido)
+- [Qué es exactamente](#qué-es-exactamente)
+- [Open source de verdad](#open-source-de-verdad)
+- [Features](#features)
+- [Qué modifica en tu PC](#qué-modifica-en-tu-pc)
+- [Qué NO hace](#qué-no-hace)
+- [Prerequisitos](#prerequisitos-powershell-copiar-y-pegar)
+- [Flujo Scoop esperado](#flujo-scoop-esperado)
+- [Cómo se organiza Liun-Dots](#cómo-se-organiza-liun-dots)
+- [Instalador TUI](#instalador-tui-qué-vas-a-ver)
+- [Actualizaciones](#actualizaciones-v1)
+- [Si algo falta, qué hago](#si-algo-falta-qué-hago)
+- [Roadmap](#roadmap)
+- [Licencia](#licencia)
+- [Seguridad](#seguridad)
+
+---
+
+## Resumen rápido
+
+- **Windows-first**: nada de depender de WSL para que el flujo tenga sentido.
+- **Open source**: podés revisar el código, adaptarlo y mejorarlo a tu manera.
+- **Instalador TUI**: guiado, claro y con backup automático.
+- **Recuperable**: si algo sale mal, podés volver atrás con rollback.
+- **Pensado para crecer**: base sólida primero, personalización después.
 
 ---
 
@@ -15,6 +50,32 @@ Hoy se enfoca en tres piezas concretas:
 - tu `init.lua` de **Neovim**
 
 Todo eso se aplica desde una **TUI en español**, con backup automático antes de sobrescribir archivos.
+
+---
+
+## Open source de verdad
+
+Liun-Dots es un proyecto **open source**. Eso significa que:
+
+- podés leer cómo funciona
+- podés proponer cambios
+- podés adaptarlo a tu propio flujo
+- no tenés que confiar a ciegas en un instalador que toca tu entorno
+
+La idea es simple: si una herramienta va a modificar tu terminal, tus configs y tu forma de trabajar, entonces tiene que ser transparente.
+
+---
+
+## Features
+
+- Instalador **TUI** en español.
+- **Chequeo previo de prerequisitos** antes de instalar.
+- **Backup automático** antes de sobrescribir archivos.
+- **Instalación segura** para no pisar configs existentes.
+- **Rollback** para volver atrás si algo sale mal.
+- **Detección local** de herramientas y versiones.
+- **Búsqueda manual de actualizaciones** con cache de 24 horas.
+- Integración pensada para flujo real con **PowerShell 7**, **Windows Terminal**, **Neovim** y **OpenCode**.
 
 ---
 
@@ -218,6 +279,24 @@ La regla es simple:
 - si querés la experiencia recomendada con IA → `scoop install opencode`
 
 Después de instalar lo que falta, abrí `liun-dots` otra vez y repetí el chequeo.
+
+---
+
+## Roadmap
+
+Ideas razonables para próximas iteraciones:
+
+- release real con binario y hash SHA256 para Scoop
+- más detecciones de entorno y mejores mensajes de recuperación
+- mayor separación interna de la TUI para facilitar mantenimiento
+- mejoras visuales pequeñas sin sacrificar rendimiento
+- integración opcional más profunda con herramientas recomendadas
+
+---
+
+## Licencia
+
+Liun-Dots está publicado como proyecto **open source**. La licencia del repositorio define cómo podés usarlo, adaptarlo y redistribuirlo.
 
 ---
 
