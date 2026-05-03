@@ -1,69 +1,27 @@
-# Liun-Dots
+# Liun Dots
 
-¡Bienvenido a mi configuración personal! Entorno de desarrollo profesional, rápido y estético.
+Windows-first development workflow for PowerShell 7, Windows Terminal, Neovim, and OpenCode.
 
-## 🛠️ Tecnologías Incluidas
-Este setup configura un entorno completo basado en estas herramientas:
+This repository is not trying to be a giant dotfiles framework. It is a small, fast, beginner-friendly baseline: open projects quickly, edit with Neovim, split panes in Windows Terminal, and launch OpenCode in the right folder.
 
-- **Shell:** `fish` (con `starship` para el prompt y `zoxide`/`fzf` para navegación).
-- **Editor:** `neovim` (configurado con LazyVim).
-- **Multiplexor:** `zellij` (gestión de ventanas y pestañas).
-- **Terminal:** `wezterm`.
-- **Utilidades:** `eza` (lista archivos), `bat` (lee archivos), `lazygit` (gestión git).
-- **Lenguajes:** `Node.js`, `Rust` (vía rustup), `Go`, `Python`.
+## What is included
 
----
+- PowerShell profile with project navigation helpers.
+- Windows Terminal settings focused on panes and PowerShell 7.
+- Minimal Neovim setup with Oil, fzf-lua, lualine, gitsigns, and which-key.
+- Workflow documentation and QA checklist.
+- Install and doctor scripts for setup/review.
 
-## 🚀 Guía de Instalación (One-Shot)
+## Core idea
 
-### 1. Requisitos previos
-Primero, asegurate de tener instalado **Git**.
+Know where you are first:
 
-**Si usás Ubuntu/WSL, instalá Linuxbrew:**
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Asegurate de agregar brew a tu PATH según las instrucciones al finalizar la instalación
-```
+- In PowerShell, use shell commands like `cproj`, `vproj`, `oc`, `lg`.
+- In Neovim/Oil, use Neovim keymaps like `Space e`, `Space Space`, `Space oc`.
+- If a project is missing from the selector, add its base folder with `addroot`.
 
-### 2. Clonar el repositorio
-```bash
-git clone https://github.com/JohannEuro/Liun-Dots.git ~/.Liun-Dots
-```
+Read `docs/workflow-cheatsheet.md` first. That is the source of truth for daily usage.
 
-### 2. Instalar dependencias según tu sistema
+## Safety
 
-#### Opción A: Fedora Linux (Recomendado)
-```bash
-# Instalar herramientas básicas, lenguajes y compiladores
-sudo dnf install -y \
-  fish neovim zellij starship eza bat fzf zoxide gh nodejs \
-  git gcc gcc-c++ make curl wget python3
-
-# Instalar Rust (vía rustup)
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# Instalar WezTerm (sigue las instrucciones oficiales: https://wezfurlong.org/wezterm/install/linux.html)
-```
-
-#### Opción B: Ubuntu / WSL
-```bash
-# Instalación vía Linuxbrew
-brew install fish neovim zellij starship eza bat fzf gh zoxide node rust go
-```
-
-### 3. Instalación automática (PUM y listo)
-Ejecutá el script incluido para configurar todo:
-```bash
-chmod +x ~/.Liun-Dots/install.sh
-~/.Liun-Dots/install.sh
-```
-
-### 4. Finalización
-1. **Cambiar shell a Fish:**
-   ```bash
-   chsh -s $(which fish)
-   ```
-2. **Reiniciar terminal:** Cerrá y abrila de nuevo.
-
----
-⚠️ **Nota para el arquitecto:** Si tu usuario no es `liun`, recordá buscar y reemplazar `/home/liun/` por tu ruta de usuario en los archivos de configuración (`.lua`, `.toml`, etc.) después de instalar.
+These configs are Windows-oriented and may contain machine-specific paths. Review before copying them blindly.
